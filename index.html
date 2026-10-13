@@ -2,235 +2,73 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>テニスコート料金</title>
-<style>
-  :root {
-    --bg: #f7f8fa;
-    --card: #ffffff;
-    --fg: #2a2f3a;
-    --muted: #6b7280;
-    --border: #e5e7eb;
-    --navy: #1a2b4a;
-    --navy-light: #2c4270;
-    --heading: #1a2b4a;
-    --coral: #e8734a;
-    --coral-soft: #fdece3;
-    --tag-bg: #1a2b4a;
-    --tag-fg: #ffffff;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #11161f;
-      --card: #1a212d;
-      --fg: #e6e9ef;
-      --muted: #9aa3b2;
-      --border: #2b3445;
-      --heading: #dbe4f5;
-      --coral: #f08a65;
-      --coral-soft: #3a2a24;
-      --tag-bg: #2c4270;
-      --tag-fg: #f1f5ff;
-      color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #11161f;
-    --card: #1a212d;
-    --fg: #e6e9ef;
-    --muted: #9aa3b2;
-    --border: #2b3445;
-    --heading: #dbe4f5;
-    --coral: #f08a65;
-    --coral-soft: #3a2a24;
-    --tag-bg: #2c4270;
-    --tag-fg: #f1f5ff;
-    color-scheme: dark;
-  }
-
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--fg);
-    font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
-    line-height: 1.6;
-    padding-inline: 16px;
-    padding-block: 32px 64px;
-  }
-  .wrap { max-width: 720px; margin: 0 auto; }
-
-  header {
-    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-    color: #fff;
-    padding: 28px;
-    border-radius: 12px;
-    margin-bottom: 28px;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0 0 4px;
-    font-size: 22px;
-    letter-spacing: 0.02em;
-    text-wrap: balance;
-  }
-  header p {
-    margin: 0;
-    font-size: 13px;
-    color: #cbd5e1;
-  }
-
-  .category { margin-bottom: 26px; }
-  .category-head {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 12px;
-  }
-  .category-tag {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    color: var(--tag-fg);
-    background: var(--tag-bg);
-    padding: 3px 10px;
-    border-radius: 999px;
-  }
-  .category-head h2 {
-    font-size: 14px;
-    margin: 0;
-    color: var(--heading);
-    font-weight: 700;
-  }
-  .category-cancel {
-    font-size: 12px;
-    color: var(--coral);
-    font-weight: 600;
-    background: var(--coral-soft);
-    padding: 2px 9px;
-    border-radius: 6px;
-  }
-  .category-line {
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-    min-width: 20px;
-  }
-
-  .court {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--coral);
-    border-radius: 10px;
-    padding: 16px 20px;
-    margin-bottom: 10px;
-    min-width: 0;
-  }
-  .court-name {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--heading);
-    margin: 0 0 6px;
-  }
-  .price {
-    display: inline-block;
-    background: var(--coral-soft);
-    color: var(--coral);
-    font-weight: 700;
-    font-size: 12.5px;
-    padding: 3px 10px;
-    border-radius: 999px;
-    font-variant-numeric: tabular-nums;
-  }
-  footer {
-    text-align: center;
-    font-size: 12px;
-    color: var(--muted);
-    margin-top: 32px;
-  }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>そうだ！テニスをやろう！ ご案内</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div class="wrap">
-  <header>
-    <h1>☆ テニスコート料金 ☆</h1>
-    <p>主要コートの料金とキャンセル規定まとめ</p>
+  <header class="s-head">
+    <div class="s-brand"><div class="s-ball"></div><div><div class="s-title">そうだ！テニスをやろう！</div><div class="s-sub">ご案内</div></div></div>
+    <nav class="s-nav"><a href="index.html" class="on" aria-current="page">ご案内</a><a href="courts.html">コート情報</a><a href="https://ball-fund.web.app" target="_blank" rel="noopener noreferrer">ボール代</a></nav>
   </header>
+  <main class="s-body">
 
-  <div class="category">
-    <div class="category-head">
-      <span class="category-tag">区営</span>
-      <h2>大田区</h2>
-      <span class="category-cancel">キャンセル期限：利用日3日前</span>
-      <div class="category-line"></div>
-    </div>
-    <div class="court">
-      <p class="court-name">平和の森公園</p>
-      <span class="price">土日祝 1h 2,200円（ナイター+600円）</span>
-    </div>
-    <div class="court">
-      <p class="court-name">昭和島二丁目公園</p>
-      <span class="price">土日祝 1h 2,800円（ナイター+700円）</span>
-    </div>
-    <div class="court">
-      <p class="court-name">本羽田公園</p>
-      <span class="price">土日祝 1h 2,200円</span>
-    </div>
-    <div class="court">
-      <p class="court-name">下丸子公園</p>
-      <span class="price">土日祝 1h 2,200円（ナイター+600円）</span>
-    </div>
-  </div>
+    <section class="s-card g">
+      <h2 class="s-h">出欠・開催</h2>
+      <p>出欠は伝助で管理しています。リンクはこれまでと同じです。新しく参加される方には、LINEなどで個別にご案内します。</p>
+      <div class="s-sym"><span><b>○</b> 参加</span><span><b>△</b> 未定</span><span><b>×</b> 不参加</span></div>
+      <p>開催可否は、原則3〜4日前に決めます。コートのキャンセル期限に合わせているため、できればそれまでに出欠を入力してもらえると助かります。</p>
+      <p>雨天などで中止になる場合は、参加予定の方に直接ご連絡します。</p>
+    </section>
 
-  <div class="category">
-    <div class="category-head">
-      <span class="category-tag">市営</span>
-      <h2>川崎市</h2>
-      <span class="category-cancel">キャンセル期限：利用日3日前</span>
-      <div class="category-line"></div>
-    </div>
-    <div class="court">
-      <p class="court-name">富士見公園</p>
-      <span class="price">土日祝 1h 1,100円（ナイター+600円）</span>
-    </div>
-  </div>
+    <section class="s-card b">
+      <h2 class="s-h">参加費</h2>
+      <div class="s-formula">参加費 ＝ コート代 ÷ 参加人数（100円単位で切り上げ）＋ ボール代100円</div>
+      <p>ボール代は、ボールの購入・補充に使っています。残高は<a href="https://ball-fund.web.app" target="_blank" rel="noopener noreferrer">ボール代のページ</a>で確認できます。</p>
+      <p class="s-note">※ 少人数の場合はボール代をいただかないことがあります。人数割りの端数は、コート確保に利用している有料サービスの費用に充てています。</p>
+      <details class="first">
+        <summary>例（コート代4,400円の場合）</summary>
+        <div>
+          <table class="s-mini">
+            <thead><tr><th>人数</th><th>コート代/人</th><th>参加費</th></tr></thead>
+            <tbody>
+              <tr><td>4人</td><td>1,100円</td><td><b>1,200円</b></td></tr>
+              <tr><td>5人</td><td>900円</td><td><b>1,000円</b></td></tr>
+              <tr><td>6人</td><td>800円</td><td><b>900円</b></td></tr>
+              <tr><td>7人</td><td>700円</td><td><b>800円</b></td></tr>
+              <tr><td>8人</td><td>600円</td><td><b>700円</b></td></tr>
+            </tbody>
+          </table>
+          <p class="s-mini-note">※ 参加費にはボール代100円を含みます。</p>
+        </div>
+      </details>
+    </section>
 
-  <div class="category">
-    <div class="category-head">
-      <span class="category-tag">都営</span>
-      <h2>東京都</h2>
-      <span class="category-cancel">キャンセル期限：利用日4日前</span>
-      <div class="category-line"></div>
-    </div>
-    <div class="court">
-      <p class="court-name">有明テニスの森公園（屋外ハード/オムニ）</p>
-      <span class="price">土日祝 1h 1,800円（ナイター+500円）</span>
-    </div>
-    <div class="court">
-      <p class="court-name">大井ふ頭中央海浜公園（ハード/オムニ）</p>
-      <span class="price">土日祝 1h 1,900円（ナイター+500円）</span>
-    </div>
-    <div class="court">
-      <p class="court-name">祖師谷公園</p>
-      <span class="price">土日祝 1h 1,300円</span>
-    </div>
-  </div>
+    <a href="courts.html" class="s-go"><span>主要コート情報<small>料金とキャンセル期限</small></span><span>→</span></a>
 
-  <div class="category">
-    <div class="category-head">
-      <span class="category-tag">民間</span>
-      <h2>民間</h2>
-      <div class="category-line"></div>
-    </div>
-    <div class="court">
-      <p class="court-name">日吉ローン</p>
-      <span class="price">土日祝 1h 3,800円</span>
-    </div>
-  </div>
+    <section class="s-card a">
+      <h2 class="s-h">補足案内・使い方</h2>
+      <details class="first">
+        <summary>開催予定のお知らせ</summary>
+        <div>
+          <p>開催予定がある程度まとまったタイミングで、連絡用LINEからお知らせする予定です。直前にコートが取れた場合などは、急募のご案内をすることもあります。</p>
+          <p>お知らせを受け取りたい方は、個別にご連絡ください。連絡用LINEをご案内します（任意）。</p>
+        </div>
+      </details>
+      <details>
+        <summary>伝助の入力について</summary>
+        <div>
+          <p>名前は、一覧が横に長くならないよう、誰かわかる3文字以内で入力してください。</p>
+          <p>登録者は定期的に整理し、長期間利用されていない方のお名前は削除する場合があります。</p>
+        </div>
+      </details>
+    </section>
 
-  <footer>最終更新: 手動メモより作成</footer>
+    <p class="s-small" style="text-align:center">ご質問・ご連絡は、これまでどおりLINEなどでお願いします。</p>
+
+  </main>
 </div>
 </body>
 </html>
